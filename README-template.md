@@ -57,7 +57,8 @@ I want to encounter more design like this in the future because it is fun.
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@MiksDev04](https://www.frontendmentor.io/profile/MiksDev04)
+
 
 
 
