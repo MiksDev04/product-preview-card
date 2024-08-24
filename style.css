@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+
+*{
+   margin: 0;
+   padding: 0;
+   font-family: Montserrat;
+}
+
+*, *::before, *::after{
+   box-sizing: border-box;
+}
+
+:root{
+    --Dark-cyan: #3c8067;
+    --Cream: #f2ebe3;
+    --Very-dark-blue: #1c232b;
+    --Dark-grayish-blue: #6c7289;
+    --White: #ffffff;
+    --fs: 14px;
+    --fw1: 500;
+    --fw2: 700;
+}
+
+body{
+   background-color: var(--Cream);
+   min-height: 100dvh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.wrapper{
+    width: clamp(320px, 90%, 700px);
+    background-color: var(--White);
+    display: grid;
+    border-radius: 10px;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+.wrapper .left{
+    background-image: url('./images/image-product-desktop.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.wrapper .right{
+    display: grid;
+    padding: 2rem;
+    gap: 1.5rem;
+}
+.right > .pefume{
+    letter-spacing: .5rem;
+    color: var(--Dark-grayish-blue);
+}
+.right h1{
+    font-size: 2.5em;
+    font-weight: var(--fw2);
+    font-family: Fraunces;
+    line-height: 2.5rem;
+    color: var(--Very-dark-blue);
+}
+.right p{
+    font-weight: var(--fw1);
+    color: var(--Dark-grayish-blue);
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+}
+.price{
+    padding: .5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.price h1{
+    color: var(--Dark-cyan);
+}
+.price h4{
+    text-decoration: line-through;
+    color: var(--Dark-grayish-blue);
+}
+.right button{
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--White);
+    border: none;
+    background-color: var(--Dark-cyan);
+    border-radius: 5px;
+    font-weight: var(--fw2);
+}
+button:hover{
+    background-color: rgb(0, 71, 0);
+}
+
+@media (max-width: 500px) {
+    .left{
+        min-height: 260px;
+    }
+    .wrapper .right{
+        gap: 1rem;
+    }
+    .right h1{
+        line-height: 2rem;
+        font-size: 1.8rem;
+    }
+    .right p{
+        font-size: 13px;
+    }
+    .price{
+        padding: 0;
+    }
+}
